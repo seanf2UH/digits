@@ -36,6 +36,9 @@ footer, footer a {
   color: var(--matr-navbar-text-color);
 }
 
+.navbar a.nav-link.active {
+  color: var(--matr-navbar-highlight-text);
+}
 /* Define custom styles */
 .gray-background {
   background-color: darkblue;
