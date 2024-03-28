@@ -11,6 +11,8 @@ const NavBar = () => {
   const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
   }), []);
+
+  // eslint-disable-next-line no-unused-vars
   const contacts = [{
     firstName: 'Philip', lastName: 'Johnson', address: 'POST 307, University of Hawaii',
     image: 'https://github.com/philipmjohnson.png',
