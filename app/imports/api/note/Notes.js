@@ -3,21 +3,20 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /**
- * The StuffsCollection. It encapsulates state and variable values for stuff.
+ * The NotesCollection. It encapsulates state and variable values for stuff.
  */
-class Contacts {
+class Notes {
   constructor() {
     // The name of this collection.
-    this.name = 'Contacts';
+    this.name = 'Notes';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      firstName: String,
-      lastName: String,
-      image: String,
-      description: String,
+      note: String,
+      contactId: String,
       owner: String,
+      createdAt: Date,
     });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
@@ -28,7 +27,7 @@ class Contacts {
 }
 
 /**
- * The singleton instance of the StuffsCollection.
- * @type {Contact}
+ * The singleton instance of the NotesCollection.
+ * @type {Notes}
  */
-export const Contact = new Contacts();
+export const Note = new Notes();
