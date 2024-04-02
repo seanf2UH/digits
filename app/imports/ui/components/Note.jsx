@@ -20,4 +20,4 @@ Note.propTypes = {
   }).isRequired,
 };
 
-export default Contact;
+export default Note;
